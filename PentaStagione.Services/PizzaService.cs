@@ -1,7 +1,6 @@
 ﻿using PentaStagione.Domain;
 using PentaStagione.Domain.Repository;
 using PentaStagione.Services.Contracts;
-using PentaStagione.Repository.Contracts;
 using PentaStagione.Repository.Contracts.ReadModel;
 
 namespace PetnaStagione.Services
