@@ -1,15 +1,13 @@
 using PentaStagione.Services.Contracts;
 using System;
 using System.Web;
-
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
 using Ninject;
 using Ninject.Web.Common;
 using System.Web.Http;
 using Ninject.Web.WebApi;
-using PentaStagione.Services;
 using PentaStagione.Services.Configurations;
+using PetnaStagione.Services;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(PentaStagione.WebApi.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(PentaStagione.WebApi.App_Start.NinjectWebCommon), "Stop")]
