@@ -3,8 +3,8 @@ using PentaStagione.Services.Contracts;
 
 namespace PentaStagione.WebApi.Controllers
 {
-    [Route("api/pizza")]
-    public class PizzaController
+    [RoutePrefix("api/pizza")]
+    public class PizzaController : ApiController
     {
         private readonly IPizzaService _pizzaService;
 
@@ -16,6 +16,12 @@ namespace PentaStagione.WebApi.Controllers
         [HttpGet]
         [Route("{id}")]
         public dynamic Get(string id)
+        {
+            return null;
+        }
+
+        [HttpGet]
+        public dynamic Get()
         {
             return null;
         }
