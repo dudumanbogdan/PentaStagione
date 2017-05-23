@@ -1,7 +1,9 @@
-﻿namespace PentaStagione.Services.Contracts
+﻿using PentaStagione.Services.Contracts.DTOs.PizzaDTOs;
+
+namespace PentaStagione.Services.Contracts
 {
     public interface IPizzaService
     {
-        void Save(object pizza);
+        void Save(PizzaDto pizza);
     }
 }

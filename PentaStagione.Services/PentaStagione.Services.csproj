@@ -53,6 +53,10 @@
       <Project>{7bb3fc1c-1c72-480a-9346-4d15610166f1}</Project>
       <Name>PentaStagione.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PentaStagione.Infrastructure\PentaStagione.Infrastructure.csproj">
+      <Project>{9090CDDA-1367-4172-B71B-2D7830882EBC}</Project>
+      <Name>PentaStagione.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PentaStagione.Repository.Contracts\PentaStagione.Repository.Contracts.csproj">
       <Project>{a12caed0-c4bd-44b3-8419-cbe11e16a112}</Project>
       <Name>PentaStagione.Repository.Contracts</Name>

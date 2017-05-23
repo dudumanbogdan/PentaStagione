@@ -14,10 +14,7 @@ namespace PentaStagione.Domain
         //TODO: display this on the UI
         public string Name { get; set; }
 
-        public IEnumerable<PizzaIngredient> Ingredients
-        {
-            get { return new List<PizzaIngredient>(_ingredients); }
-        }
+        public IEnumerable<PizzaIngredient> Ingredients => new List<PizzaIngredient>(_ingredients);
 
         public void AddIngredient(PizzaIngredient ingredient)
         {

@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\PizzaDTOs\PizzaDto.cs" />
+    <Compile Include="DTOs\PizzaIngredientDTOs\PizzaIngredientDto.cs" />
     <Compile Include="IPizzaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
