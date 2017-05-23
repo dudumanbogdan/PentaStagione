@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using PentaStagione.Infrastructure.Domain;
+using System;
 
 namespace PentaStagione.Domain
 {
@@ -23,6 +24,12 @@ namespace PentaStagione.Domain
         {
             //interception
             _ingredients.Add(ingredient);
+        }
+
+        public Pizza(string name )
+        {
+           Id = Guid.NewGuid().ToString();
+           Name = name;
         }
     }
 }
