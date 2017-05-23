@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\PizzaServiceNinjectModule.cs" />
     <Compile Include="PizzaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,10 +57,18 @@
       <Project>{a12caed0-c4bd-44b3-8419-cbe11e16a112}</Project>
       <Name>PentaStagione.Repository.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PentaStagione.Repository\PentaStagione.Repository.SqlServer.csproj">
+      <Project>{2F0F008B-677F-43B7-8BAF-09558B8B9E79}</Project>
+      <Name>PentaStagione.Repository.SqlServer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PentaStagione.Services.Contracts\PentaStagione.Services.Contracts.csproj">
       <Project>{2540e6d6-1999-4876-b7f9-2c03d7314b53}</Project>
       <Name>PentaStagione.Services.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
