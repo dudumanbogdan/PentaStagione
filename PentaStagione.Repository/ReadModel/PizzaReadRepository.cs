@@ -1,11 +1,12 @@
-﻿using PentaStagione.Repository.Contracts;
+﻿using System;
+using PentaStagione.Domain;
 using PentaStagione.Repository.Contracts.ReadModel;
 
 namespace PentaStagione.Repository.ReadModel
 {
     public class PizzaReadRepository : IPizzaReadRepository
     {
-        public PizzaDto GetById(int pizzaId)
+        public Pizza Get(Guid pizzaId)
         {
             throw new System.NotImplementedException();
         }

@@ -15,6 +15,8 @@ namespace PentaStagione.Services.Configurations
             Kernel?.Load(new DatabaseNinjectModule());
             Bind<IPizzaReadRepository>().To<PizzaReadRepository>();
             Bind<IPizzaRepository>().To<PizzaRepository>();
+
+            Bind<IPizzaIngredientReadRepository>().To<PizzaIngredientReadRepository>();
         }
     }
 }

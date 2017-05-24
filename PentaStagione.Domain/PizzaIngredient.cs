@@ -1,10 +1,17 @@
-﻿using PentaStagione.Infrastructure.Domain;
+﻿using System;
+using PentaStagione.Infrastructure.Domain;
 
 namespace PentaStagione.Domain
 {
     public class PizzaIngredient : IEntity
     {
-        //TODO: generate id
-        public string Id { get; }
+        public PizzaIngredient()
+        {
+            Id = Guid.NewGuid();
+        }
+
+        public Guid Id { get; }
+
+        public string Name { get; set; }
     }
 }

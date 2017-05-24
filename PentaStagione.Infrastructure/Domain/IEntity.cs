@@ -1,7 +1,9 @@
-﻿namespace PentaStagione.Infrastructure.Domain
+﻿using System;
+
+namespace PentaStagione.Infrastructure.Domain
 {
     public interface IEntity
     {
-        string Id { get; }
+        Guid Id { get; }
     }
 }

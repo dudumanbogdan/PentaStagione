@@ -7,6 +7,7 @@ namespace PentaStagione.Repository
     {
         public void Save(Pizza pizzaAggregate)
         {
+            //todo save in db
             throw new System.NotImplementedException();
         }
     }
