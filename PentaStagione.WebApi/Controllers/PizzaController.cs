@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Collections.Generic;
+using System.Web.Http;
 using PentaStagione.Services.Contracts;
 using PentaStagione.Services.Contracts.DTOs.PizzaDTOs;
 
@@ -16,21 +18,19 @@ namespace PentaStagione.WebApi.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public dynamic Get(string id)
+        public PizzaDto Get(Guid id)
         {
-            return null;
+            return _pizzaService.Get(id);
         }
 
         [HttpGet]
-        public dynamic Get()
+        public ICollection<PizzaDto> Get()
         {
             return null;
         }
 
-        //localhost:49900/api/pizza?id=EEED800C-9E0B-460D-8444-9A627497E51C
-        //{ "Name": "new pizza", "Ingredients":[{"Id":"111111","Name":"sare"}, {"Id":"2222222","Name":"piper"}]}
         [HttpPost]
-        public void Post([FromUri]string id, [FromBody]PizzaDto pizza)
+        public void Post(PizzaDto pizza)
         {
             _pizzaService.Save(pizza);
         }

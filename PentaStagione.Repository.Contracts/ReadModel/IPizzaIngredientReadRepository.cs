@@ -1,10 +1,11 @@
-﻿using PentaStagione.Domain;
+﻿using System;
+using PentaStagione.Domain;
 
 namespace PentaStagione.Repository.Contracts.ReadModel
 {
     public interface IPizzaIngredientReadRepository
     {
-        PizzaIngredient GetById(string pizzaId);
+        PizzaIngredient Get(Guid pizzaId);
 
     }
 }

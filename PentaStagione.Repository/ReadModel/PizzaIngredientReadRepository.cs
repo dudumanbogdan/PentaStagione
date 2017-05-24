@@ -6,7 +6,7 @@ namespace PentaStagione.Repository.ReadModel
 {
     public class PizzaIngredientReadRepository : IPizzaIngredientReadRepository
     {
-        public PizzaIngredient GetById(string pizzaId)
+        public PizzaIngredient Get(Guid pizzaId)
         {
             //TODO return ingredient from db
             throw new NotImplementedException();

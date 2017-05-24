@@ -10,7 +10,7 @@ namespace PentaStagione.Domain
         private readonly List<PizzaIngredient> _ingredients;
 
         //TODO: generate a new GUID only once
-        public string Id { get; private set; }
+        public Guid Id { get; private set; }
 
         //TODO: display this on the UI
         public string Name { get; set; }
@@ -23,9 +23,13 @@ namespace PentaStagione.Domain
             _ingredients.Add(ingredient);
         }
 
+        public Pizza()
+        {
+            Id = Guid.NewGuid();
+        }
         public Pizza(string name )
         {
-           Id = Guid.NewGuid().ToString();
+           Id = Guid.NewGuid();
            Name = name;
         }
     }

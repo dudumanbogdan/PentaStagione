@@ -8,12 +8,11 @@ namespace PentaStagione.Services.Contracts.DTOs.PizzaDTOs
     {
         public PizzaDto()
         {
-            Id = Guid.NewGuid().ToString();
             Ingredients=new List<PizzaIngredientDto>();
         }
 
         public List<PizzaIngredientDto> Ingredients { get; set; }
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
     }
 }

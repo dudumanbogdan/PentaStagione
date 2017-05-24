@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using PentaStagione.Domain;
 using PentaStagione.Domain.Repository;
@@ -32,14 +32,14 @@ namespace PentaStagione.Services
             };
             foreach (var ingredientDto in pizzaDto.Ingredients)
             {
-                pizzaAggregate.AddIngredient(_ingredientReadRepository.GetById(ingredientDto.Id));
+                pizzaAggregate.AddIngredient(_ingredientReadRepository.Get(ingredientDto.Id));
             }
             _repository.Save(pizzaAggregate);
         }
 
-        public PizzaDto GetById(int pizzaId)
+        public PizzaDto Get(Guid pizzaId)
         {
-            var pizza = _readRepository.GetById(pizzaId);
+            var pizza = _readRepository.Get(pizzaId);
             var pizzaDto=new PizzaDto
             {
                 Id = pizza.Id,
