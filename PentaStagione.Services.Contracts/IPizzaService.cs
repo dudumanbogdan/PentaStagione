@@ -1,4 +1,5 @@
 ﻿using PentaStagione.Repository.Contracts;
+using System.Collections.Generic;
 
 namespace PentaStagione.Services.Contracts
 {
@@ -6,6 +7,8 @@ namespace PentaStagione.Services.Contracts
     {
         void Save(object pizza);
 
-        PizzaReadDTO GetById(string pizzaId)
+        PizzaReadDTO GetById(string pizzaId);
+
+        IEnumerable<PizzaReadDTO> GetAllPizzas();
     }
 }

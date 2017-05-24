@@ -1,4 +1,6 @@
-﻿using PentaStagione.Repository.Contracts;
+﻿using System;
+using System.Collections.Generic;
+using PentaStagione.Repository.Contracts;
 using PentaStagione.Repository.Contracts.ReadModel;
 
 namespace PentaStagione.Repository.ReadModel

@@ -19,11 +19,13 @@ namespace PentaStagione.WebApi.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var pizzas = _service.GetAllPizzas();
+
+            return View(pizzas);
         }
 
         [Route("{id}")]
-        public ActionResult Details(string id)
+        public ActionResult Pizza(string id)
         {
             var pizza = _service.GetById(id);
 
