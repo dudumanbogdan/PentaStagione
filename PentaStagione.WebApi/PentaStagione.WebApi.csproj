@@ -170,6 +170,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -182,6 +183,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PentaStagione.Repository.Contracts\PentaStagione.Repository.Contracts.csproj">
+      <Project>{a12caed0-c4bd-44b3-8419-cbe11e16a112}</Project>
+      <Name>PentaStagione.Repository.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PentaStagione.Services.Contracts\PentaStagione.Services.Contracts.csproj">
       <Project>{2540e6d6-1999-4876-b7f9-2c03d7314b53}</Project>
       <Name>PentaStagione.Services.Contracts</Name>

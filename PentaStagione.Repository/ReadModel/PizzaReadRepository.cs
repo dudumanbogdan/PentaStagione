@@ -5,7 +5,7 @@ namespace PentaStagione.Repository.ReadModel
 {
     public class PizzaReadRepository : IPizzaReadRepository
     {
-        public PizzaDto GetById(int pizzaId)
+        public PizzaReadDTO GetById(string pizzaId)
         {
             throw new System.NotImplementedException();
         }

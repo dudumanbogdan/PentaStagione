@@ -1,0 +1,23 @@
+﻿@using PentaStagione.Repository.Contracts
+@model PizzaReadDTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.Name</h2>
+
+<ul class="list-group">
+    @foreach (var ingr in Model.Ingredients)
+    {
+        <div class="panel panel-info">
+            <li id="list-group-item">
+                <span class="label label-primary">Name:</span>
+                @ingr.Id;
+            </li>
+        </div>
+    }
+</ul>
+
+
+
