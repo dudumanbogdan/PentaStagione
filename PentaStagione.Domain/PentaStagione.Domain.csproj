@@ -43,6 +43,7 @@
     <Compile Include="PizzaIngredient.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IIngredientRepository.cs" />
     <Compile Include="Repository\IPizzaRepository.cs" />
   </ItemGroup>
   <ItemGroup>

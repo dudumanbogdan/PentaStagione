@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReadModel\IIngredientsReadRepository.cs" />
+    <Compile Include="ReadModel\IngredientDto.cs" />
     <Compile Include="ReadModel\IPizzaReadRepository.cs" />
     <Compile Include="ReadModel\PizzaDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

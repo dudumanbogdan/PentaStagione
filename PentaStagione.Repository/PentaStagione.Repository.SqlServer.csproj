@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\DatabaseNinjectModule.cs" />
+    <Compile Include="ReadModel\IngredientReadRepository.cs" />
+    <Compile Include="ReadModel\IngredientRepository.cs" />
     <Compile Include="ReadModel\PizzaReadRepository.cs" />
     <Compile Include="PizzaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
