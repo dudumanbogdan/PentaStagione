@@ -28,7 +28,7 @@ namespace PentaStagione.Repository.ReadModel
 
                 if (pizza != null)
                 {
-                    ingredients = cn.Query<PizzaIngredient>($"SELECT Id, IsExtra FROM PizzaToIngredients pi JOIN Ingredients i ON  pi.IngredientId = i.Id WHERE pi.PizzaId = {pizzaId}");
+                    ingredients = cn.Query<PizzaIngredient>($"SELECT Id FROM PizzaToIngredients pi JOIN Ingredients i ON  pi.IngredientId = i.Id WHERE pi.PizzaId = {pizzaId}");
                 }
                 else
                 {

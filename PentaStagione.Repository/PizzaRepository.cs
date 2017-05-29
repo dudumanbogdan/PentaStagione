@@ -26,7 +26,7 @@ namespace PentaStagione.Repository
                 {
                     try
                     {
-                        rows = cn.Execute("INSERT INTO Pizzas VALUES (@Id, @Name, @Price, @Sauce, @Size)", pizzaAggregate, tran);
+                        rows = cn.Execute("INSERT INTO Pizzas VALUES (@Id, @Name)", pizzaAggregate, tran);
 
                         PizzaIngredient ingredientCheck;
 
@@ -36,7 +36,7 @@ namespace PentaStagione.Repository
 
                             if (ingredientCheck == null)
                             {
-                                rows = cn.Execute("INSERT INTO Ingredients VALUES (@Id, @IsExtra)", ingr, tran);
+                                rows = cn.Execute("INSERT INTO Ingredients VALUES (@Id)", ingr, tran);
                             }
                             rows = cn.Execute("INSERT INTO PizzaToIngredients VALUES (@PizzaId, @IngredientId)", new { PizzaId = pizzaAggregate.Id, IngredientId = ingr.Id }, tran);
                         }
