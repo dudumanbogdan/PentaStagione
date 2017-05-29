@@ -21,26 +21,28 @@ namespace PetnaStagione.Services
             _readRepository = readRepository;
         }
 
-        public object GetById(int pizzaId)
-        {
-            return _readRepository.GetById(pizzaId);
-        }
-
         public void Save(PizzaDTO pizzaDTO)
         {
             if (pizzaDTO == null) throw new ArgumentNullException();
 
-            Pizza pizza = new Pizza();
+            Pizza pizzaAggregate = new Pizza(pizzaDTO.Name);
+
+            foreach (var ingr in pizzaDTO.Ingredients)
+            {
+                pizzaAggregate.AddIngredient(ingr);
+            }
+
+            _repository.Save(pizzaAggregate);
         }
 
         public PizzaReadDTO GetById(string pizzaId)
         {
-            throw new NotImplementedException();
+            return _readRepository.GetById(pizzaId);
         }
 
         public IEnumerable<PizzaReadDTO> GetAllPizzas()
         {
-            throw new NotImplementedException();
+            return _readRepository.GetAllPizzas();
         }
     }
 }
