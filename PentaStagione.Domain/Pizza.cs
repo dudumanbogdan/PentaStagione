@@ -9,10 +9,8 @@ namespace PentaStagione.Domain
     {
         private readonly List<PizzaIngredient> _ingredients;
 
-        //TODO: generate a new GUID only once
         public string Id { get; private set; }
 
-        //TODO: display this on the UI
         public string Name { get; set; }
 
         public IEnumerable<PizzaIngredient> Ingredients
@@ -20,10 +18,20 @@ namespace PentaStagione.Domain
             get { return new List<PizzaIngredient>(_ingredients); }
         }
 
+        public Pizza(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException();
+
+            Id = Guid.NewGuid().ToString();
+            Name = name;
+        }
+
         public void AddIngredient(PizzaIngredient ingredient)
         {
-            //interception
-            _ingredients.Add(ingredient);
+            if (ingredient == null) throw new ArgumentNullException();
+
+            if (!Ingredients.Contains(ingredient))
+                _ingredients.Add(ingredient);
         }
 
         public Pizza(string name )
