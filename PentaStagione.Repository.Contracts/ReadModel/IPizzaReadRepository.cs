@@ -2,6 +2,6 @@
 {
     public interface IPizzaReadRepository
     {
-        PizzaDto GetById(int pizzaId);
+        PizzaReadDTO GetById(string pizzaId);
     }
 }
