@@ -1,0 +1,26 @@
+﻿@model IEnumerable<PentaStagione.Repository.Contracts.PizzaReadDTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Welcome</h1>
+        <ul class="list-group">
+            @foreach (var pizza in Model)
+            {
+                <div class="panel panel-info">
+                    <li id="list-group-item">
+                        <span class="label label-primary">Pizza Type:</span>
+                        @pizza.Name;
+                    </li>
+                    <li id="list-group-item">
+                        @Html.ActionLink("Pizza", "Home", new { id = pizza.ID})
+                    </li>
+                </div>
+            }
+        </ul>
+    </div>
+</div>
+

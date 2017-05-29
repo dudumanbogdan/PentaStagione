@@ -1,8 +1,8 @@
 ﻿using PentaStagione.Domain;
 using PentaStagione.Domain.Repository;
 using PentaStagione.Services.Contracts;
-using PentaStagione.Repository.Contracts;
 using PentaStagione.Repository.Contracts.ReadModel;
+using PentaStagione.Repository.Contracts;
 
 namespace PetnaStagione.Services
 {
@@ -22,7 +22,7 @@ namespace PetnaStagione.Services
             _repository.Save(pizzaAggregate);
         }
 
-        public object GetById(int pizzaId)
+        public PizzaReadDTO GetById(string pizzaId)
         {
             return _readRepository.GetById(pizzaId);
         }

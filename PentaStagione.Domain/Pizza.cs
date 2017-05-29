@@ -22,7 +22,7 @@ namespace PentaStagione.Domain
 
         public void AddIngredient(PizzaIngredient ingredient)
         {
-            //interception
+            // interception
             _ingredients.Add(ingredient);
         }
 

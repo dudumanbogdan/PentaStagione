@@ -40,8 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PizzaDTO.cs" />
     <Compile Include="ReadModel\IPizzaReadRepository.cs" />
-    <Compile Include="ReadModel\PizzaDto.cs" />
+    <Compile Include="ReadModel\PizzaReadDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

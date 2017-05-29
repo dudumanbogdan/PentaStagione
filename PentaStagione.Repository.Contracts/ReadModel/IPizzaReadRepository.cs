@@ -1,7 +1,9 @@
-﻿namespace PentaStagione.Repository.Contracts.ReadModel
+﻿using System.Collections.Generic;
+
+namespace PentaStagione.Repository.Contracts.ReadModel
 {
     public interface IPizzaReadRepository
     {
-        PizzaDto GetById(int pizzaId);
+        PizzaReadDTO GetById(string pizzaId);
     }
 }
