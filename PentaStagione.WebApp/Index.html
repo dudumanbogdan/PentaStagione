@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>PentaStagione</title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="https://thumbs.dreamstime.com/z/vector-pizza-white-isolated-background-39418257.jpg" type="images/jpg" sizes="30x30" />
+</head>
+<body ng-app="app.pizza">
+
+    <ul class="nav nav-pills nav-justified">
+        <li><a href="#!/users">users</a></li>
+        <li><a href="#!/newUser">Add new user</a></li>
+    </ul>
+    
+    <div ng-view></div>
+
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <script src="AngularJs/app.pizza.js"></script>
+    <script src="AngularJs/Controllers/usersController.js"></script>
+    <script src="AngularJs/Services/requests.js"></script>
+</body>
+
+
+</html>
